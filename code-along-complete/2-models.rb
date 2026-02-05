@@ -99,3 +99,9 @@ twitter.destroy
 
 # How many rows are in the companies table?
 puts "companies: #{Company.all.count}" # companies: 2
+
+companies = Company.all
+
+for company in companies
+  puts company["name"]
+end
