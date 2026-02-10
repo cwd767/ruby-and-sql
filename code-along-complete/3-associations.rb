@@ -41,6 +41,11 @@ contact.save
 puts "There are #{Company.all.count} companies"
 puts "There are #{Contact.all.count} contacts"
 
+expected_number_of_contacts = 3
+if expected_number_of_contacts != Contact.all.count
+  raise "FAILURE!"  
+end
+
 # 2. How many contacts work at Apple?
 
 # first query to find the row in companies for Apple
